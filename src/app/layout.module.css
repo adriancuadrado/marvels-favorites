@@ -1,0 +1,22 @@
+.body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  background-color: black;
+  height: 84px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+}
+
+.favorites {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.heartCount {
+  color: white;
+}

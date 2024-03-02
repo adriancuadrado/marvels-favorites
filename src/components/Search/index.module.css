@@ -1,0 +1,32 @@
+.searchWithResults {
+  margin-bottom: 35px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  column-gap: 3.5px;
+  border-bottom: 1px solid black;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+.inputSearch {
+  border: none;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 16px;
+  margin-left: 6px;
+}
+
+.inputSearch::placeholder {
+  color: #aaaaaa;
+}
+
+.inputSearch:is(:focus-visible) {
+  outline: none;
+}
+
+.results {
+  font-size: 12px;
+}

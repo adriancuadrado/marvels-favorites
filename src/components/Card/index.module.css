@@ -1,0 +1,57 @@
+.card {
+  --transition-duration: 0.5s;
+}
+
+.picture {
+  display: block;
+}
+
+.red {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5.38px;
+  background-color: #ec1d24;
+  transition-property: height;
+  transition-duration: var(--transition-duration);
+}
+
+.card:hover .red {
+  height: 100%;
+}
+
+.info {
+  --corner-size: 12.86px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  height: 50px;
+  clip-path: polygon(
+    calc(100% - var(--corner-size)) 100%,
+    0 100%,
+    0 0,
+    100% 0,
+    100% calc(100% - var(--corner-size))
+  );
+  padding: 5.38px 16px calc(var(--corner-size) / 2);
+}
+
+.name {
+  position: relative;
+  color: white;
+  font-size: 14px;
+  line-height: 16.41px;
+}
+
+.heart {
+  width: 12px;
+  transition-property: filter;
+  transition-duration: var(--transition-duration);
+}
+
+.card:hover .heart {
+  filter: brightness(0) invert(1);
+}
