@@ -55,3 +55,9 @@
 .card:hover .heart {
   filter: brightness(0) invert(1);
 }
+
+@media (width <= 834px) {
+  .picture {
+    width: 172.5px;
+  }
+}

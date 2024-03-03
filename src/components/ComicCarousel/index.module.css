@@ -12,3 +12,9 @@
 .carousel::-webkit-scrollbar-thumb {
   background-color: #ec1d24;
 }
+
+@media (width <= 834px) {
+  .carousel {
+    scrollbar-width: none;
+  }
+}

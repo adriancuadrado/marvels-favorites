@@ -20,3 +20,16 @@
 .heartCount {
   color: white;
 }
+
+@media (width < 615px) {
+  .header {
+    padding-left: 15px;
+    padding-right: 24px;
+  }
+}
+
+@media (width <= 834px) {
+  .html {
+    scrollbar-width: none;
+  }
+}

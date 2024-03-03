@@ -7,7 +7,6 @@
 .banner {
   --corner-size: 24px;
   display: flex;
-  column-gap: 48px;
   justify-content: center;
   background-color: black;
   border-top: solid 1px #333333;
@@ -19,6 +18,65 @@
     100% 0,
     100% calc(100% - var(--corner-size))
   );
+}
+
+@media (width <= 834px) {
+  .banner .title {
+    font-size: 32px;
+  }
+
+  .main {
+    > .subtitle {
+      font-size: 24px;
+      margin-top: 48px;
+      margin-left: 95px;
+    }
+
+    .carousel {
+      margin-left: 95px;
+    }
+  }
+
+  .picture {
+    width: 278px;
+    height: 278px;
+  }
+}
+
+@media (width < 615px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    border-top: none;
+
+    .title {
+      margin-top: 23px;
+    }
+
+    .info {
+      width: auto;
+      margin: 0 16px;
+    }
+
+    .text {
+      margin: 17px 0 48px;
+    }
+  }
+
+  .main {
+    > .subtitle {
+      margin-left: 30px;
+    }
+
+    .carousel {
+      margin-left: 30px;
+    }
+  }
+
+  .picture {
+    width: 393px;
+    height: 397.89px;
+  }
 }
 
 .titleWrapper {
@@ -39,6 +97,7 @@
   justify-content: center;
   color: white;
   width: 592px;
+  margin: 0 48px;
 }
 
 .subtitle {
@@ -49,5 +108,6 @@
 
 .subtitle,
 .carousel {
-  width: calc(320px + 48px + 592px);
+  width: 100%;
+  max-width: 1010px;
 }

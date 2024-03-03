@@ -16,3 +16,18 @@
 .year {
   font-size: 12px;
 }
+
+@media (width <= 834px) {
+  .picture {
+    width: 168.53px;
+    height: 252.79px;
+  }
+
+  .title {
+    font-size: 15.05px;
+  }
+
+  .year {
+    font-size: 11.29px;
+  }
+}

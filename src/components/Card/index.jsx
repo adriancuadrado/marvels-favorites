@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './index.module.css';
 import Heart from '../Heart';
+import isMobile from '@/utils/isMobile';
 
 export default () => (
   <div className={styles.card}>
@@ -9,7 +10,7 @@ export default () => (
       src='/test-image.png'
       // TODO: Poner en el alt el nombre del personaje, que no se olvide
       alt='Adam Warlock'
-      width={189}
+      width={isMobile() ? 172.5 : 189}
       // TODO: Segun el figma la imagen es 189.97px
       // de alto, pero en realidad está incluyendo
       // la barra de color rojo asi que tengo que

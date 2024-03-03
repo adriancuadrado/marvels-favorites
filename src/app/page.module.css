@@ -1,10 +1,25 @@
 .main {
   display: flex;
   flex-direction: column;
-  margin-top: 59px;
-  margin-left: 47px;
+  margin: 59px 47px 0;
 }
 
 .title {
-  margin: -12px 0 36px;
+  margin: -11px 0 36px;
+}
+
+@media (width <= 834px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media (width < 615px) {
+  .title {
+    margin-top: -12px;
+  }
+
+  main.main {
+    margin: 35px 16px 0;
+  }
 }

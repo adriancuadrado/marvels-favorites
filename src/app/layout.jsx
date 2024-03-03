@@ -16,7 +16,10 @@ const robotoCondensed = Roboto_Condensed({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en' className={robotoCondensed.className}>
+    <html
+      lang='en'
+      className={[robotoCondensed.className, styles.html].join(' ')}
+    >
       <body className={styles.body}>
         <header className={styles.header}>
           <Logo />
