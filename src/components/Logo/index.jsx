@@ -1,5 +1,3 @@
-import Image from 'next/image';
+import logo from './logo.svg';
 
-export default () => (
-  <Image src='/logo.svg' alt='Marvel logo' width={130} height={52} priority />
-);
+export default () => <img src={logo.src} alt='Marvel logo' />;

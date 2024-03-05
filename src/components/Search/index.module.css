@@ -17,6 +17,11 @@
   font-family: inherit;
   font-size: 16px;
   margin-left: 6px;
+  flex-grow: 1;
+}
+
+.inputSearch::-webkit-search-cancel-button {
+  display: none;
 }
 
 .inputSearch::placeholder {

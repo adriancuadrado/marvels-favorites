@@ -1,5 +1,5 @@
 .body {
-  margin: 0;
+  margin: 0 0 100px;
 }
 
 .header {
@@ -9,16 +9,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 48px;
-}
-
-.favorites {
-  display: flex;
-  align-items: center;
-  column-gap: 8px;
-}
-
-.heartCount {
-  color: white;
 }
 
 @media (width < 615px) {

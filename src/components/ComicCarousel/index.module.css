@@ -10,7 +10,7 @@
 }
 
 .carousel::-webkit-scrollbar-thumb {
-  background-color: #ec1d24;
+  background-color: var(--marvel-red);
 }
 
 @media (width <= 834px) {

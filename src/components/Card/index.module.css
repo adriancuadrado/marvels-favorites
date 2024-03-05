@@ -2,8 +2,9 @@
   --transition-duration: 0.5s;
 }
 
-.picture {
-  display: block;
+.image {
+  width: 189px;
+  height: 188.5px;
 }
 
 .red {
@@ -12,7 +13,7 @@
   left: 0;
   right: 0;
   height: 5.38px;
-  background-color: #ec1d24;
+  background-color: var(--marvel-red);
   transition-property: height;
   transition-duration: var(--transition-duration);
 }
@@ -44,10 +45,19 @@
   color: white;
   font-size: 14px;
   line-height: 16.41px;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 128px;
 }
 
 .heart {
+  filter: brightness(1);
   width: 12px;
+}
+
+.heart--full {
   transition-property: filter;
   transition-duration: var(--transition-duration);
 }
@@ -57,7 +67,7 @@
 }
 
 @media (width <= 834px) {
-  .picture {
+  .image {
     width: 172.5px;
   }
 }

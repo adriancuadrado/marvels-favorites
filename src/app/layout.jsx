@@ -1,8 +1,11 @@
+import '@/app/global.css';
 import styles from './layout.module.css';
 
 import { Roboto_Condensed } from 'next/font/google';
-import Heart from '@/components/Heart';
 import Logo from '@/components/Logo';
+import Link from 'next/link';
+import FavoritesProvider from '@/state/favorites/Provider';
+import HeartCounter from '@/components/HeartCounter';
 
 export const metadata = {
   title: 'Zara Web Challenge',
@@ -21,14 +24,17 @@ export default function RootLayout({ children }) {
       className={[robotoCondensed.className, styles.html].join(' ')}
     >
       <body className={styles.body}>
-        <header className={styles.header}>
-          <Logo />
-          <div className={styles.favorites}>
-            <Heart />
-            <span className={[styles.heartCount].join(' ')}>3</span>
-          </div>
-        </header>
-        {children}
+        <FavoritesProvider>
+          <header className={styles.header}>
+            <Link href='/'>
+              <Logo />
+            </Link>
+            <Link href='/favorites'>
+              <HeartCounter />
+            </Link>
+          </header>
+          {children}
+        </FavoritesProvider>
       </body>
     </html>
   );

@@ -4,7 +4,9 @@
   margin-bottom: 24px;
 }
 
-.picture {
+.image {
+  width: 179.2px;
+  height: 268.8px;
   margin-bottom: 12px;
 }
 
@@ -18,7 +20,7 @@
 }
 
 @media (width <= 834px) {
-  .picture {
+  .image {
     width: 168.53px;
     height: 252.79px;
   }

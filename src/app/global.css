@@ -1,0 +1,12 @@
+html {
+  --marvel-red: #ec1d24;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  object-fit: cover;
+  display: block;
+}

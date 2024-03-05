@@ -1,12 +1,12 @@
-import Image from 'next/image';
+import { FULL } from './constants';
 
-export default ({ empty, className }) => (
-  <Image
-    src={empty ? '/empty-heart.svg' : '/full-heart.svg'}
+export default ({ type = FULL, className, onClick }) => (
+  <img
+    src={type}
     alt='Heart icon'
     className={className}
-    width={24}
-    height={21.68}
-    priority
+    onClick={onClick}
+    onMouseEnter={(event) => (event.target.src = FULL)}
+    onMouseLeave={(event) => (event.target.src = type)}
   />
 );
