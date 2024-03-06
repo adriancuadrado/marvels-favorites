@@ -3,7 +3,7 @@ import { useReducer } from 'react';
 import reducer from './reducer';
 import Context from './Context';
 
-export default ({ initialState, children }) => {
+export default function CharactersProvider({ initialState, children }) {
   const [characters, dispatch] = useReducer(reducer, initialState);
 
   const setCharacters = (characters) =>
@@ -14,4 +14,4 @@ export default ({ initialState, children }) => {
       {children}
     </Context.Provider>
   );
-};
+}

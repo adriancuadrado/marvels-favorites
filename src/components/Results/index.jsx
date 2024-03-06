@@ -6,7 +6,7 @@ import Link from 'next/link';
 import CharactersContext from '@/state/characters/Context';
 import FavoritesContext from '@/state/favorites/Context';
 
-export default ({ favoritesOnly }) => {
+export default function Results({ favoritesOnly }) {
   const { characters } = useContext(CharactersContext);
   const { favorites, addFavorite, removeFavorite } =
     useContext(FavoritesContext);
@@ -43,4 +43,4 @@ export default ({ favoritesOnly }) => {
       )}
     </div>
   );
-};
+}

@@ -26,12 +26,14 @@ export default function RootLayout({ children }) {
       <body className={styles.body}>
         <FavoritesProvider>
           <header className={styles.header}>
-            <Link href='/'>
-              <Logo />
-            </Link>
-            <Link href='/favorites'>
-              <HeartCounter />
-            </Link>
+            <nav className={styles.nav}>
+              <Link href='/'>
+                <Logo />
+              </Link>
+              <Link href='/favorites'>
+                <HeartCounter />
+              </Link>
+            </nav>
           </header>
           {children}
         </FavoritesProvider>

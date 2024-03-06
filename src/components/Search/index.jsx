@@ -7,7 +7,7 @@ import CharactersContext from '@/state/characters/Context';
 import { getCharacters } from '@/api';
 import FavoritesContext from '@/state/favorites/Context';
 
-export default ({ favoritesOnly }) => {
+export default function Search({ favoritesOnly }) {
   // Este 'requestRef' lo usamos para que el listado se actualize con el resultado de cada request hecha en orden
   // Supongamos que la request para buscar 'Thor' tardara un segundo pero la de 'Spiderman' tardara 10.
   // Si el usuario introduce primero 'Spiderman', empezaría a ejecutarse la request de 'Spiderman'. Luego el usuario
@@ -44,4 +44,4 @@ export default ({ favoritesOnly }) => {
       </span>
     </div>
   );
-};
+}

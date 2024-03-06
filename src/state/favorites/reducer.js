@@ -1,4 +1,4 @@
-export default (state, { type, payload }) => {
+const reducer = (state = {}, { type, payload }) => {
   let newState = state;
   let updateLocalStorage = true;
   switch (type) {
@@ -23,3 +23,5 @@ export default (state, { type, payload }) => {
   }
   return newState;
 };
+
+export default reducer;

@@ -5,7 +5,7 @@ import CharactersProvider from '@/state/characters/Provider';
 import { getCharacters } from '@/api';
 import getServerSideQueryParams from '@/utils/getServerSideQueryParams';
 
-export default async function Home() {
+export default async function Page() {
   return (
     <CharactersProvider
       initialState={await getCharacters(undefined, getServerSideQueryParams())}

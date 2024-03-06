@@ -3,7 +3,7 @@ import { useEffect, useReducer } from 'react';
 import reducer from './reducer';
 import Context from './Context';
 
-export default ({ children }) => {
+export default function FavoritesProvider({ children }) {
   const [favorites, dispatch] = useReducer(reducer, {});
 
   const loadFavorites = (characters) =>
@@ -26,4 +26,4 @@ export default ({ children }) => {
       {children}
     </Context.Provider>
   );
-};
+}
