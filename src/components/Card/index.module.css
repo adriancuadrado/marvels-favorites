@@ -38,6 +38,16 @@
     100% calc(100% - var(--corner-size))
   );
   padding: 5.38px 16px calc(var(--corner-size) / 2);
+
+  > .heart {
+    filter: brightness(1);
+    width: 12px;
+  }
+
+  > .heart--full {
+    transition-property: filter;
+    transition-duration: var(--transition-duration);
+  }
 }
 
 .name {
@@ -50,16 +60,6 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 128px;
-}
-
-.heart {
-  filter: brightness(1);
-  width: 12px;
-}
-
-.heart--full {
-  transition-property: filter;
-  transition-duration: var(--transition-duration);
 }
 
 .card:hover .heart {

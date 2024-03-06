@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ZARA WEB CHALLENGE - Adrian Cuadrado
 
-## Getting Started
+Puedes ver la aplicacióon desplegada en el siguiente enlace:  
+https://zara-web-challenge-adrian-cuadrado.vercel.app/
 
-First, run the development server:
+No verás una barra roja como la que se muestra en el diseño del Figma cuando está cargando porque con el SSR de NextJS la pantalla que carga el usuario aparecerá directamente con los datos, asi que no tiene sentido mostrar una barra de cargando cuando los datos ya aparecen cargados.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Los personajes favoritos se almacenan en el localstorage del navegador, lo que significa que seguirán seleccionados tras recargar la pagina.
+
+Cuando se pasa el raton por encima de una card en modo desktop, se muestra de color rojo la parte inferior de la card, y cuando el raton sale de la card se vuelve a mostrar negro. Este comportamiento no puede reproducirse de forma correcta en la version mobile porque no hay raton en este caso. Puedes ver que esto mismo sucede tambien en el ejemplo que provee MDN del uso de :hover en el CSS. Verás que no funciona del todo bien, como si se quedara todo el rato detectando :hover cuando el raton no está encima cuando lo pruebas en modo mobile. https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+
+## Como ejecutar la aplicación
+
+Primero debes acceder a https://developer.marvel.com/account para obtener las claves publica y privada que necesitas para ejecutar la aplicación. Tendrás que crearte una cuenta si no la tienes.
+
+El siguiente paso es crear un archivo `.env.local` y editarlo para incluir las keys que debes obtener, tal y como se indica en el ficher `.env`:
+
+```
+NEXT_PUBLIC_KEY=<TU CLAVE PÚBLICA DE LA API DE MARVEL>
+PRIVATE_KEY=<TU CLAVE PRIVADA DE LA API DE MARVEL>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Instala las dependencias:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Para ejecutar el proyecto en modo desarrollo:
 
-## Learn More
+```sh
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Para ejecutar el proyecto en modo producción:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+npm run build
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Para ejecutar los tests:
 
-## Deploy on Vercel
+```sh
+npm test
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> El test de `layout.jsx` no se incluye porque no se considera buena practica testearlo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Para ejecutar el linter y comprobar la calidad del codigo:
+
+```sh
+npm run lint
+```
+
+> Por defecto NextJS incluye el plugin `eslint-plugin-jsx-a11y` para comprobar los problemas de accesibilidad que pudiera haber. Para comprobar que esta web es accesible, basta con ejecutar `npm run lint` y comprobar que no se muestran errores.
+
+## Frameworks y librerias utilizados
+
+- ReactJS
+- NextJS
+- Jest
+
+## Estructura del proyecto
+
+```
+src/
+├── api.js
+├── app
+│   ├── favicon.ico
+│   ├── favorites
+│   │   └── page.jsx
+│   ├── global.css
+│   ├── [id]
+│   │   ├── page.jsx
+│   │   └── page.module.css
+│   ├── layout.jsx
+│   ├── layout.module.css
+│   ├── page.jsx
+│   └── page.module.css
+├── components
+│   ├── Banner
+│   │   ├── index.jsx
+│   │   └── index.module.css
+│   ├── Card
+│   │   ├── index.jsx
+│   │   └── index.module.css
+│   ├── Comic
+│   │   ├── index.jsx
+│   │   └── index.module.css
+│   ├── ComicCarousel
+│   │   ├── index.jsx
+│   │   └── index.module.css
+│   ├── ExternalImage
+│   │   ├── index.jsx
+│   │   └── index.module.css
+│   ├── Heart
+│   │   ├── constants.js
+│   │   ├── empty-heart.svg
+│   │   ├── empty-thick-heart.svg
+│   │   ├── full-heart.svg
+│   │   ├── index.jsx
+│   │   └── index.module.css
+│   ├── HeartCounter
+│   │   ├── index.jsx
+│   │   └── index.module.css
+│   ├── Logo
+│   │   ├── index.jsx
+│   │   └── logo.svg
+│   ├── Results
+│   │   ├── index.jsx
+│   │   └── index.module.css
+│   └── Search
+│       ├── index.jsx
+│       ├── index.module.css
+│       └── magnifying-glass.svg
+├── state
+│   ├── characters
+│   │   ├── Context.jsx
+│   │   ├── Provider.jsx
+│   │   └── reducer.js
+│   └── favorites
+│       ├── Context.jsx
+│       ├── Provider.jsx
+│       └── reducer.js
+└── utils
+    ├── formatters.js
+    └── getServerSideQueryParams.js
+```
