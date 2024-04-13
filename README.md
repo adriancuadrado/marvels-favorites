@@ -2,8 +2,6 @@
 
 https://zara-web-challenge-adrian-cuadrado.vercel.app/
 
-Favorite characters are stored in the browser's localstorage, which means they will remain selected after reloading the page.
-
 ## How to execute
 
 First go to https://developer.marvel.com/account and get a public and private keys. You might have to create an account for this.
