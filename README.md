@@ -1,67 +1,58 @@
 # ZARA WEB CHALLENGE - Adrian Cuadrado
 
-Puedes ver la aplicacióon desplegada en el siguiente enlace:  
 https://zara-web-challenge-adrian-cuadrado.vercel.app/
 
-No verás una barra roja como la que se muestra en el diseño del Figma cuando está cargando porque con el SSR de NextJS la pantalla que carga el usuario aparecerá directamente con los datos, asi que no tiene sentido mostrar una barra de cargando cuando los datos ya aparecen cargados.
+Favorite characters are stored in the browser's localstorage, which means they will remain selected after reloading the page.
 
-Los personajes favoritos se almacenan en el localstorage del navegador, lo que significa que seguirán seleccionados tras recargar la pagina.
+## How to execute
 
-Cuando se pasa el raton por encima de una card en modo desktop, se muestra de color rojo la parte inferior de la card, y cuando el raton sale de la card se vuelve a mostrar negro. Este comportamiento no puede reproducirse de forma correcta en la version mobile porque no hay raton en este caso. Puedes ver que esto mismo sucede tambien en el ejemplo que provee MDN del uso de :hover en el CSS. Verás que no funciona del todo bien, como si se quedara todo el rato detectando :hover cuando el raton no está encima cuando lo pruebas en modo mobile. https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+First go to https://developer.marvel.com/account and get a public and private keys. You might have to create an account for this.
 
-## Como ejecutar la aplicación
-
-Primero debes acceder a https://developer.marvel.com/account para obtener las claves publica y privada que necesitas para ejecutar la aplicación. Tendrás que crearte una cuenta si no la tienes.
-
-El siguiente paso es crear un archivo `.env.local` y editarlo para incluir las keys que debes obtener, tal y como se indica en el ficher `.env`:
+Next you have to create a `.env.local` file and edit it to include the keys, as specified in `.env`:
 
 ```
 NEXT_PUBLIC_KEY=<TU CLAVE PÚBLICA DE LA API DE MARVEL>
 PRIVATE_KEY=<TU CLAVE PRIVADA DE LA API DE MARVEL>
 ```
 
-Instala las dependencias:
+Install dependencies:
 
 ```sh
 npm install
 ```
 
-Para ejecutar el proyecto en modo desarrollo:
+Execute in dev mode:
 
 ```sh
 npm run dev
 ```
 
-Para ejecutar el proyecto en modo producción:
+Execute in prod mode:
 
 ```sh
 npm run build
 npm run start
 ```
 
-Para ejecutar los tests:
+Execute the tests:
 
 ```sh
 npm test
 ```
 
-> El test de `layout.jsx` no se incluye porque no se considera buena practica testearlo
-
-Para ejecutar el linter y comprobar la calidad del codigo:
+Execute linter:
 
 ```sh
 npm run lint
 ```
 
-> Por defecto NextJS incluye el plugin `eslint-plugin-jsx-a11y` para comprobar los problemas de accesibilidad que pudiera haber. Para comprobar que esta web es accesible, basta con ejecutar `npm run lint` y comprobar que no se muestran errores.
-
-## Frameworks y librerias utilizados
+## Used frameworks and libraries
 
 - ReactJS
 - NextJS
 - Jest
 
-## Estructura del proyecto
+## Proyect structure
 
 ```
 src/
