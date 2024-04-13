@@ -1,6 +1,6 @@
 # MARVEL'S FAVORITES
 
-https://zara-web-challenge-adrian-cuadrado.vercel.app/
+https://marvels-favorites.vercel.app/
 
 ## How to execute
 
