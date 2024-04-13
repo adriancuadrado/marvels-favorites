@@ -1,4 +1,4 @@
-# ZARA WEB CHALLENGE - Adrian Cuadrado
+# MARVEL'S FAVORITES
 
 https://zara-web-challenge-adrian-cuadrado.vercel.app/
 
@@ -11,8 +11,8 @@ First go to https://developer.marvel.com/account and get a public and private ke
 Next you have to create a `.env.local` file and edit it to include the keys, as specified in `.env`:
 
 ```
-NEXT_PUBLIC_KEY=<TU CLAVE PÚBLICA DE LA API DE MARVEL>
-PRIVATE_KEY=<TU CLAVE PRIVADA DE LA API DE MARVEL>
+NEXT_PUBLIC_KEY=<YOUR PUBLIC API KEY>
+PRIVATE_KEY=<YOUR PRIVATE API KEY>
 ```
 
 Install dependencies:
