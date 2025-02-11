@@ -44,7 +44,7 @@ npm install
     npm run lint
     ```
 
-## Frameworks and libraries
+## Technologies
 
 - ReactJS
 - NextJS
