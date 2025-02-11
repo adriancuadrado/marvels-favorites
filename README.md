@@ -2,7 +2,7 @@
 
 https://marvels-favorites.vercel.app/
 
-## How to execute
+## How to run
 
 First go to https://developer.marvel.com/account and get a public and private keys. You might have to create an account for this.
 
@@ -19,100 +19,33 @@ Install dependencies:
 npm install
 ```
 
-Execute in dev mode:
+* Development:
+    
+    ```sh
+    npm run dev
+    ```
 
-```sh
-npm run dev
-```
+* Production:
 
-Execute in prod mode:
+    ```sh
+    npm run build
+    npm run start
+    ```
 
-```sh
-npm run build
-npm run start
-```
+* Tests:
 
-Execute the tests:
+    ```sh
+    npm test
+    ```
 
-```sh
-npm test
-```
+* Linter:
 
-Execute linter:
+    ```sh
+    npm run lint
+    ```
 
-```sh
-npm run lint
-```
-
-## Used frameworks and libraries
+## Frameworks and libraries
 
 - ReactJS
 - NextJS
 - Jest
-
-## Proyect structure
-
-```
-src/
-├── api.js
-├── app
-│   ├── favicon.ico
-│   ├── favorites
-│   │   └── page.jsx
-│   ├── global.css
-│   ├── [id]
-│   │   ├── page.jsx
-│   │   └── page.module.css
-│   ├── layout.jsx
-│   ├── layout.module.css
-│   ├── page.jsx
-│   └── page.module.css
-├── components
-│   ├── Banner
-│   │   ├── index.jsx
-│   │   └── index.module.css
-│   ├── Card
-│   │   ├── index.jsx
-│   │   └── index.module.css
-│   ├── Comic
-│   │   ├── index.jsx
-│   │   └── index.module.css
-│   ├── ComicCarousel
-│   │   ├── index.jsx
-│   │   └── index.module.css
-│   ├── ExternalImage
-│   │   ├── index.jsx
-│   │   └── index.module.css
-│   ├── Heart
-│   │   ├── constants.js
-│   │   ├── empty-heart.svg
-│   │   ├── empty-thick-heart.svg
-│   │   ├── full-heart.svg
-│   │   ├── index.jsx
-│   │   └── index.module.css
-│   ├── HeartCounter
-│   │   ├── index.jsx
-│   │   └── index.module.css
-│   ├── Logo
-│   │   ├── index.jsx
-│   │   └── logo.svg
-│   ├── Results
-│   │   ├── index.jsx
-│   │   └── index.module.css
-│   └── Search
-│       ├── index.jsx
-│       ├── index.module.css
-│       └── magnifying-glass.svg
-├── state
-│   ├── characters
-│   │   ├── Context.jsx
-│   │   ├── Provider.jsx
-│   │   └── reducer.js
-│   └── favorites
-│       ├── Context.jsx
-│       ├── Provider.jsx
-│       └── reducer.js
-└── utils
-    ├── formatters.js
-    └── getServerSideQueryParams.js
-```
