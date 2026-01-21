@@ -1,3 +1,9 @@
+# This project no longer works because it depends on the Marvel API and they have officially closed the API.
+
+https://www.reddit.com/r/MarvelUnlimited/comments/1jfwfe0/comment/nom0kr8/
+
+---
+
 # MARVEL'S FAVORITES
 
 https://marvels-favorites.vercel.app/
