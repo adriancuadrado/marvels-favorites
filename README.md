@@ -1,4 +1,4 @@
-# This project no longer works because it depends on the Marvel API and they have officially closed the API.
+# This project no longer works because it depends on the Marvel API and they have officially shut it down.
 
 https://www.reddit.com/r/MarvelUnlimited/comments/1jfwfe0/comment/nom0kr8/
 
